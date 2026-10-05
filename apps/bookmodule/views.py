@@ -6,6 +6,13 @@ def index(request):
     name = request.GET.get("name") or "world!"
     return render(request, "bookmodule/index.html", {"name": name})
 
+def list_books(request):
+    return render(request, 'bookmodule/list_books.html')
+
+
+def aboutus(request):
+    return render(request, 'bookmodule/aboutus.html')
+
 
 def index2(request, val1=0):
     return HttpResponse("value1 = " + str(val1))
